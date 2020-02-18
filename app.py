@@ -29,11 +29,11 @@ def home():
 
 @app.route('/login', methods=['POST'])
 def do_admin_login():
-    if request.form['password'] == '' and request.form['username'] == '':
+    if request.form['password'] == 'admin123' and request.form['username'] == 'adminext':
         session['logged_in_EXT'] = True
         return render_template('index.html', urls=urls_EXT)
     
-    if request.form['password'] == '' and request.form['username'] == '':
+    if request.form['password'] == 'admin321' and request.form['username'] == 'adminint':
         session['logged_in_INT'] = True
         return render_template('index.html', urls=urls_INT)
 
