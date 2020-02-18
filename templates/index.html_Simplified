@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+<div style='text-align:center;' >
+
+
+<table id="HomeSC"  width=100% border="0" >
+        <tr>
+
+                <td>
+                <iframe id="cam1" src="{{urls[1]}}:9003/jsfs.html" width="720" height="1280" ></iframe>
+                </td>
+
+                <td>
+
+                 <iframe id="cam2" src="{{urls[2]}}:9001/jsfs.html" width="720" height="1280"></iframe>
+                
+                </td>
+        
+        </tr>
+        <tr>
+                <th><a href="{{ urls[1] }}"> Configure Driveway</th>
+                <th><a href="{{ urls[2] }}"> Configure Porch </th>
+        </tr>
+        
+
+</table>
+</div>
+{% endblock content %}
+

@@ -1,0 +1,40 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+<div style='text-align:center;' >
+
+<iframe src="http://free.timeanddate.com/clock/i6oaeus0/n179/tt0/tw0/tm1/ta1/tb4" frameborder="0" width="146" height="36"></iframe>
+
+<table id="HomeSC"  width=100% border="0" >
+        <tr>
+                <th><a href="{{ urls[2] }}"> Configure Driveway</th>
+                <th><a href="{{ urls[1] }}"> Configure Porch </th>
+        </tr>
+        <tr>
+
+                <td>
+                <iframe id="cam2" src="{{ urls[2] }}/jsfs.html" width="720" height="1280" border-style:solid;"></iframe>
+                </td>
+
+                <td>
+
+                 <iframe id="cam2" src="{{ urls[1] }}/jsfs.html" width="720" height="1280" border-style:solid;"></iframe>
+                
+                </td>
+        
+        </tr>
+        
+
+</table>
+<table>
+        <tr>
+                <!--<p> <a href="{{ urls[0] }}/jsfs.html"> See Cam1 </a> </p> -->
+                <p> <a href="{{ urls[1] }}/jsfs.html"> See Porch Only</a> </p>
+                <p> <a href="{{ urls[0] }}/jsfs.html"> See Driveway Only</a> </p>
+                <p> <a href="{{ urls[2] }}/jsfs.html"> See Backyard Only</a> </p>
+
+        </tr>
+</table>
+</div>
+{% endblock content %}
+

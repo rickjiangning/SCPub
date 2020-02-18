@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div style='text-align:center;' >
+<iframe src="http://free.timeanddate.com/clock/i735iib1/n250/fn6/fs36/tct/pct/ftb/pa8/tt0/td2/th2/ta1/tb4" align="left" frameborder="0" width="640" height="240" resizeable="yes" allowTransparency="true"></iframe> 
+<iframe src="https://forecast.io/embed/#lat=43.4799&lon=-80.5392&name=Waterloo,Ontario,Canada&color=#00AAFF&font=Georgia&units=ca" align="left" frameborder="0" width="640" height="240" resizeable="yes" allowTransparency="true"> </iframe>
+
+<table id="HomeSC" align="left"  border="0" >
+        <tr>
+                <td>
+                <iframe id="Porch" src="{{urls[1]}}:9001/jsfs.html" width="640" height="480" align="left" resizable="yes"></iframe>
+                <iframe id="Driveway" src="{{urls[1]}}:9003/jsfs.html" width="640" height="480" align="left" resizable="yes"></iframe>
+                <iframe id="Street" src="{{urls[1]}}:9002/jsfs.html" width="640" height="480" align="left" resizable="yes"></iframe>
+                <iframe id="350Driveway" src="{{urls[3]}}:8080/jsfs.html" width="640" height="480" align="left" resizable="yes"></iframe>
+                </td>
+
+        </tr>
+</table>
+<table id="HomeSC_Conf" align="left"  border="0" >
+        <tr>
+                <td>
+                <button onclick="window.location.href = '{{urls[1]}}:9001';" style="height:50px;width:200px"> Configure Porch </button>
+                <button onclick="window.location.href = '{{urls[1]}}:9003';" style="height:50px;width:200px"> Configure Driveway </button>
+                <button onclick="window.location.href = '{{urls[1]}}:9002';" style="height:50px;width:200px"> Configure Street </button>
+                <button onclick="window.location.href = '{{urls[3]}}:8080';" style="height:50px;width:200px" > Configure 350 Driveway </button>
+                <button onclick="window.location.href = '/logout';" style="height:50px;width:200px" > Logout </button>
+		</td>
+        </tr>
+</table>
+</div>
+{% endblock content %}
+
