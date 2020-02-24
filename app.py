@@ -5,20 +5,22 @@ import os
 Ext905=os.getenv('Ext_IP_905',"")
 Int905=os.getenv('Int_IP_905',"")
 EXT350=os.getenv('Ext_IP_350',"")
+PASSWDINT=os.getenv('PWDINT',"")
+PASSWDEXT=os.getenv('PWDEXT',"")
 
 app = Flask(__name__)
 
 urls_EXT = [
         Ext905, #905
-        'http://209.202.207.141', #905 
-        'http://209.202.207.141', #905 
-        'http://99.250.143.55', #350 
+        Ext905, #905 
+        Ext905, #905 
+        EXT350, #350 
         ]
 urls_INT = [
         Int905, #905
-        'http://192.168.0.122', #905
-        'http://192.168.0.122', #905
-        'http://99.250.143.55', #350
+        Int905, #905
+        Int905, #905
+        EXT350, #350
         ]
 
 @app.route('/')
@@ -33,11 +35,11 @@ def home():
 
 @app.route('/login', methods=['POST'])
 def do_admin_login():
-    if request.form['password'] == 'admin123' and request.form['username'] == 'adminext':
+    if request.form['password'] == PASSWDEXT and request.form['username'] == 'adminext':
         session['logged_in_EXT'] = True
         return render_template('index.html', urls=urls_EXT)
     
-    if request.form['password'] == 'admin321' and request.form['username'] == 'adminint':
+    if request.form['password'] == PASSWDINT and request.form['username'] == 'adminint':
         session['logged_in_INT'] = True
         return render_template('index.html', urls=urls_INT)
 
