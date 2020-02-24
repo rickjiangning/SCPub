@@ -2,16 +2,20 @@ from flask import Flask
 from flask import Flask, flash, redirect, render_template, request, session, abort
 import os
 
+Ext905=os.getenv('Ext_IP_905',"")
+Int905=os.getenv('Int_IP_905',"")
+EXT350=os.getenv('Ext_IP_350',"")
+
 app = Flask(__name__)
 
 urls_EXT = [
-        'http://209.202.207.141', #905
+        Ext905, #905
         'http://209.202.207.141', #905 
         'http://209.202.207.141', #905 
         'http://99.250.143.55', #350 
         ]
 urls_INT = [
-        'http://192.168.0.122', #905
+        Int905, #905
         'http://192.168.0.122', #905
         'http://192.168.0.122', #905
         'http://99.250.143.55', #350
