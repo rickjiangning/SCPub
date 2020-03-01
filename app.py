@@ -2,11 +2,6 @@ from flask import Flask
 from flask import Flask, flash, redirect, render_template, request, session, abort
 import os
 
-
-
-
-
-
 Ext905=os.getenv('Ext_IP_905',"")
 Int905=os.getenv('Int_IP_905',"")
 EXT350=os.getenv('Ext_IP_350',"")
