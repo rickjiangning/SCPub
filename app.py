@@ -24,7 +24,7 @@ urls_INT = [
         ]
 
 @app.route('/')
-#@app.route('/login')
+@app.route('/login')
 def home():
     if  session.get('logged_in_INT'):
         return render_template('index.html', urls=urls_INT)
