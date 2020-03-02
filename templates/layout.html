@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Security Cameras</title>
+    	<meta charset="UTF-8">
+    	<title>Security Cameras</title>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 	<script>
         $(document).ready(function(){
           $("#hide_show").click(function(){
@@ -12,16 +13,10 @@
 	</script>
 </head>
 <body onload = "JavaScript:AutoRefresh(30000);" style="background-color:#CCCCCC">
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-        <script type="text/javascript">
-                   setInterval(refreshIframe1, 30000);
-                   function refreshIframe1() {
-                           $("#Frame1")[0].src = $("#Frame1")[0].src;
-                   }
-         </script>
 
-    {% block content %}
-    {% endblock content %}
+
+	{% block content %}
+    	{% endblock content %}
 
 </body>
 </html>
