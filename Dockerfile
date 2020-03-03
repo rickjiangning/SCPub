@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM ubuntu:latest
 
 #ENV COLOR "red"
 RUN apt-get update -y && \
