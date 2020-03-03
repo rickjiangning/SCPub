@@ -7,12 +7,12 @@
 	<script>
         $(document).ready(function(){
           $("#hide_show").click(function(){
-            $("table").slideToggle("slow");
+            $("table").fadeToggle("slow");
           });
         });
 	</script>
 </head>
-<body onload = "JavaScript:AutoRefresh(30000);" style="background-color:#CCCCCC">
+<body onload = "JavaScript:AutoRefresh(60000);" style="background-color:#CCCCCC">
 
 
 	{% block content %}
