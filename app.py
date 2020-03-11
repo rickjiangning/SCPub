@@ -7,6 +7,7 @@ Int905=os.getenv('Int_IP_905',"")
 EXT350=os.getenv('Ext_IP_350',"")
 PASSWDINT=os.getenv('PWDINT',"")
 PASSWDEXT=os.getenv('PWDEXT',"")
+DURATION=os.getenv('DURATION',"")
 
 app = Flask(__name__)
 
