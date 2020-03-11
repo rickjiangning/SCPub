@@ -10,14 +10,15 @@
             $("table").fadeToggle("slow");
           });
         });
-	function refreshIFrame() {
-            var x = document.getElementById("Porch");
-            x.contentWindow.location.reload();
-            var t = setTimeout(refreshIFrame, 3000);
-        }
+		
+	window.setInterval("reloadIFrame();", 3000);
+	function reloadIFrame()
+	{
+		document.frames["Porch"].location.reload();
+	}
 	</script>
 </head>
-<body onload = "JavaScript:refreshIFrame();" style="background-color:#CCCCCC">
+<body onload = "JavaScript:reloadIFrame();" style="background-color:#CCCCCC">
 
 
 	{% block content %}
