@@ -7,9 +7,9 @@
 <table id="HomeSC" align="left"  border="0" >
         <tr>
                 <td>
-                <iframe id="Porch" src="{{urls[1]}}:9001/jsfs.html" width="640" height="480" align="left" resizable="yes"></iframe>
-                <iframe id="Driveway" src="{{urls[1]}}:9002/jsfs.html" width="640" height="480" align="left" resizable="yes"></iframe>
-                <iframe id="Street" src="{{urls[1]}}:9003/jsfs.html" width="640" height="480" align="left" resizable="yes"></iframe>
+                <iframe id="Porch" src="{{urls[1]}}:8443/porch/video" width="640" height="480" align="left" resizable="yes"></iframe>
+                <iframe id="Driveway" src="{{urls[1]}}:8443/driveway/video" width="640" height="480" align="left" resizable="yes"></iframe>
+                <iframe id="Street" src="{{urls[1]}}:8443/street/video" width="640" height="480" align="left" resizable="yes"></iframe>
                 <iframe id="350Driveway" src="{{urls[3]}}:8080/jsfs.html" width="640" height="480" align="left" resizable="yes"></iframe>
                 </td>
 
@@ -18,12 +18,12 @@
 <table id="HomeSC_Conf" align="left"  border="0" >
         <tr>
                 <td>
-                <button onclick="window.location.href = '{{urls[1]}}:9001';" style="height:50px;width:200px"> Porch </button>
-                <button onclick="window.location.href = '{{urls[1]}}:9002';" style="height:50px;width:200px"> Driveway </button>
-                <button onclick="window.location.href = '{{urls[1]}}:9003';" style="height:50px;width:200px"> Street </button>
+                <button onclick="window.location.href = '{{urls[1]}}:9101';" style="height:50px;width:200px"> Porch </button>
+                <button onclick="window.location.href = '{{urls[1]}}:9102';" style="height:50px;width:200px"> Driveway </button>
+                <button onclick="window.location.href = '{{urls[1]}}:9103';" style="height:50px;width:200px"> Street </button>
                 <button onclick="window.location.href = '{{urls[3]}}:8080';" style="height:50px;width:200px" > 350 Driveway </button>
                 <button onclick="window.location.href = '/logout';" style="height:50px;width:200px" > Logout </button>
-		</td>
+                </td>
         </tr>
 </table>
 	<button id="hide_show" style="height:50px;width:200px">Hide and Show</button>
