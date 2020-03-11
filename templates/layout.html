@@ -11,13 +11,16 @@
           });
         });
 		
-	 $(function() {
-	setInterval(refreshiframe, 2000);
+	$(function() {
+		setInterval(refreshiframeFast, 2000);
+		setInterval(refreshiframeSlow, 5000);
 	});
-	function refreshiframe() {
+	function refreshiframeFast() {
 		$('#Porch').attr('src', $('#Porch').attr('src'));
 		$('#Driveway').attr('src', $('#Driveway').attr('src'));
 		$('#Street').attr('src', $('#Street').attr('src'));
+	}
+	function refreshiframeSlow() {
 		$('#350').attr('src', $('#350').attr('src'));
 	}
 	</script>
