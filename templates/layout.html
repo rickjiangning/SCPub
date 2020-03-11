@@ -11,14 +11,15 @@
           });
         });
 		
-	window.setInterval("reloadIFrame();", 3000);
-	function reloadIFrame()
-	{
-		document.frames["Porch"].location.reload();
+	 $(function() {
+	setInterval(refreshiframe, 5000);
+	});
+	function refreshiframe() {
+	$('#Porch').attr('src', $('#Porch').attr('src'));
 	}
 	</script>
 </head>
-<body onload = "JavaScript:reloadIFrame();" style="background-color:#CCCCCC">
+<body style="background-color:#CCCCCC">
 
 
 	{% block content %}
